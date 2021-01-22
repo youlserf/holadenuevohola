@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Desarrollo de Validacion</h1>
+    <form method="POST">
+        <table>
+            <tr>
+                <td>Nombre</td>
+                <td><input type="text" name="nombre" id="nombre"></td>
+            </tr>
+            <tr>
+                <td>telefono</td>
+                <td><input type="number" name="telefono" id="telefono" oninvalid="alert('numero invalido');return false"></td>
+            </tr>
+            <tr>
+                <td>Fecha de Nacimiento</td>
+                <td>
+                    <input type="number" name="dia" id="dia" size="2">
+                    <input type="number" name="mes" id="mes" size="2">
+                    <input type="number" name="año" id="año" size="2">
+                </td>
+            </tr>
+            <tr>
+                <td>Sexo</td>
+                <td>
+                    <input type="radio" name="sexo" value="H">Hombre
+                    <input type="radio" name="sexo" value="M">Mujer
+                </td>
+            </tr>
+            <tr>
+                <td>Mayor a 10 años?</td>
+                <td><input type="checkbox" name="mayor" id="mayora10"></td>
+            </tr>
+        </table>
+        <p>
+            <input type="button" onclick='enviarFormulario()' value="Enviar" class="nav-link" href="envio2.html">
+            <input type="reset" name="" value="Limpiar">
+        </p>
+    </form>
+    <script>
+        function enviarFormulario(){
+            var nombre = document.getElementById('nombre').value;
+            var telefono = document.getElementById('telefono').value;
+            var dia = document.getElementById('dia').value;
+            var mes = document.getElementById('mes').value;
+            var año = document.getElementById('año').value;
+            var mayorde10 = document.getElementById('mayora10').checked;
+            var sexo = document.getElementsByName('sexo')
+    </script>
+        
+
+</body>
+</html>
